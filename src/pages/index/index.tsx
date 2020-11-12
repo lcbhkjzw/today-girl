@@ -20,7 +20,7 @@ export default class Index extends Component {
       <View className='index'>
         {
           data.map(i => {
-            return <Image mode="aspectFit" className="girl-image" src={i}></Image>
+            return <Image mode="widthFix" className="girl-image" src={i}></Image>
           })
         }
       </View>
