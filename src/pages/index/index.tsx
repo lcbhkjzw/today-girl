@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
-import { View, Text } from '@tarojs/components'
+import { View, Image } from '@tarojs/components'
 import './index.less'
+import data from '../../data/picData'
 
 export default class Index extends Component {
 
@@ -17,7 +18,11 @@ export default class Index extends Component {
   render () {
     return (
       <View className='index'>
-        <Text>Hello world!</Text>
+        {
+          data.map(i => {
+            return <Image mode="aspectFit" className="girl-image" src={i}></Image>
+          })
+        }
       </View>
     )
   }
